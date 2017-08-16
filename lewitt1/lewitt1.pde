@@ -25,11 +25,17 @@ void draw(){
   
   strokeWeight(1);
   stroke(0);
+    for(int i=1;i<x.length;i++){
+line(x[i], y[i], x[i-1], y[i-1]);
+    }
+  
+  /*
   for(int i=0;i<x.length;i++){
     for(int j=0;j<x.length;j++){
     
-    
+    line(x[i], y[i], x[j], y[j]);
     }
   }
+  */
   
 }
