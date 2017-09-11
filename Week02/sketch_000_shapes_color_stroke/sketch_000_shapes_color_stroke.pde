@@ -1,3 +1,8 @@
+//PROCESSING INTRO
+// https://processing.org
+// http://fyprocessing.tumblr.com
+// https://www.openprocessing.org
+
 
 //000////////////////////////////////////////////////////////////////////
 //First let's draw a circle
@@ -123,12 +128,43 @@ void draw(){
 //TRY: Draw a circle in the center of the canvas
 //using width, height and some simple math
 
-//other shapes
+rect (x, y, width, height);
 
-//shape drawing
+//PROJECT:
+//Josef Albers - Homage to the Square
+//homage to the square image search
+//article: https://www.khanacademy.org/humanities/art-1010/abstract-exp-nyschool/ny-school/a/albers-homage-to-the-square
+//https://www.youtube.com/watch?v=FpTr_BDVjFI
+//Using a 500x500 canvas create your own Homage to the Square
+//Experiment with colors & perspective
+//Look at some examples
+//Make several and compare and contrast
+//Be able to justify your choices
+
+//other shapes
+//line(x1, y1, x2, y2)
+//triangle (x1, y1, x2, y2, x3, y3)
+//quad (x1, y1, x2, y2, x3, y3, x4, y4)
+//rect (x, y, width, height);
+//ellipse (x, y, width, height);
+//arc (x, y, width, height, start rads, end rads)
+arc(width/2, height/2, 300, 300, -HALF_PI, 0);
+arc(250, 250, 300, 300, HALF_PI, PI);
+arc(width/2, height/2, 300, 300, radians(-40), radians(60));
+
+
+//PROJECT:
+//Suprematism
+//Wikipedia: https://en.wikipedia.org/wiki/Suprematism
+//Examples:
+// https://www.guggenheim.org/artwork/movement/suprematism
+// https://www.wikiart.org/en/kazimir-malevich/suprematism-1915
+// https://www.liveauctioneers.com/item/1782412_65-nina-kogan-1887-1942-russian-suprematism-circ
+// Suprematism google images
 ////same size as your screen
-////use at least one of each shape
+////Try to use at least one of each shape
 ////make shape drawing
+println(mouseX, " : ", mouseY);
 
 //variables
 ////see processing book
@@ -136,3 +172,11 @@ void draw(){
 //text
 
 //images
+
+//Arrays
+
+//For loops
+
+//grid
+
+//connect the dots game
