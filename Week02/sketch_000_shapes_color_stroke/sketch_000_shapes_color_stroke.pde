@@ -73,45 +73,41 @@ ellipse(33, 67, 60, 60);
 //from now on, we will always have a setup and draw area
 //Here is the syntax:
 
-void setup(){
-  
+void setup() {
 }
 
-void draw(){
-  
+void draw() {
 }
 
 //we can add our first item to setup - size()
 // size(width, height) will be the size of our canvas
 // run this in setup, as we only need to establish the size once
 
-void setup(){
+void setup() {
   size(500, 500);
-  
 }
 
-void draw(){
-  
+void draw() {
 }
 //background
 //run the following
 
-void setup(){
+void setup() {
   size(500, 500);
 }
 
-void draw(){
+void draw() {
   ellipse( mouseX, mouseY, 50, 50);
 }
 
 //see how the circles turn into a worm as you move the mouse
 //now run this code
 
-void setup(){
+void setup() {
   size(500, 500);
 }
 
-void draw(){
+void draw() {
   background(0); //black 255 is white
   ellipse( mouseX, mouseY, 50, 50);
 }
@@ -152,6 +148,7 @@ arc(width/2, height/2, 300, 300, -HALF_PI, 0);
 arc(250, 250, 300, 300, HALF_PI, PI);
 arc(width/2, height/2, 300, 300, radians(-40), radians(60));
 
+//Introduce: translate, rotate, scale, push/pop matrix
 
 //PROJECT:
 //Suprematism
@@ -167,11 +164,124 @@ arc(width/2, height/2, 300, 300, radians(-40), radians(60));
 println(mouseX, " : ", mouseY);
 
 //variables
-////see processing book
+size(480, 120);
+smooth();
+int y = 100;
+int d = 130;
+ellipse(75, y, d, d);    // Left
+ellipse(175, y, d, d);   // Middle
+ellipse(275, y, d, d);   // Right
+
+//Declare on root and assigning value in setup
+int y, d;
+void setup() {
+  size(500, 500);
+  y = height/2;
+  d = 130;
+}
+void draw() {
+  ellipse(75, y, d, d);    // Left
+  ellipse(175, y, d, d);   // Middle
+  ellipse(275, y, d, d);   // Right
+}
+
+
 
 //text
 
+//install font from Create font menu
+
+PFont myFont;
+
+void setup() {
+  size(200, 200);
+  // Uncomment the following two lines to see the available fonts 
+  //String[] fontList = PFont.list();
+  //printArray(fontList);
+  myFont = createFont("Georgia", 32);
+  textFont(myFont);
+  textAlign(CENTER, CENTER);
+  textSize(50);
+  text("!@#$%", width/2, height/2);
+}
+
+//TRY:
+// try picking different fonts, create font for each one, 
+// different variable for each one
+// different alignments
+// different sizes next to each other
+
+//translate and rotate text
+//push matrix
+PFont myFont;
+
+void setup() {
+  size(500, 500);
+  // Uncomment the following two lines to see the available fonts 
+  //String[] fontList = PFont.list();
+  //printArray(fontList);
+}
+
+void draw() {
+  myFont = createFont("Georgia", 32);
+  textFont(myFont);
+  textAlign(CENTER, CENTER);
+  textSize(50);
+  text("!@#$%", width/2, height/2);
+  translate(width/2, height/2);
+  rotate(radians(45));
+  text("!@#$%fdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafsa", 0, 0);
+}
+
+PFont myFont;
+
+void setup() {
+  size(500, 500);
+  // Uncomment the following two lines to see the available fonts 
+  //String[] fontList = PFont.list();
+  //printArray(fontList);
+}
+
+void draw() {
+  myFont = createFont("Georgia", 32);
+  textFont(myFont);
+  textAlign(CENTER, CENTER);
+  textSize(50);
+  text("!@#$%", width/2, height/2);
+  pushMatrix();
+  translate(width/2, height/2);
+  rotate(radians(45));
+  text("!@#$%fdsafdsafdsafdsafdsafdsafdsafdsafdsafdsafsa", 0, 0);
+  popMatrix();
+  rect(0, 0, 50, 50);
+}
+
+
+//PROJECT:
+// Concrete Poetry
+// https://www.poets.org/poetsorg/text/brief-guide-concrete-poetry
+// http://www.ubu.com/vp/
+// http://www.getty.edu/research/exhibitions_events/exhibitions/concrete_poetry/
+// concrete poetry google image search
+
 //images
+PImage img;
+
+void setup() {
+  img = loadImage("laDefense.jpg");
+}
+
+void draw() {
+  imageMode(CORNER);
+  image(img, 10, 10, 50, 50);  // Draw image using CORNER mode
+}
+
+//PROJECT
+//Photo Collage
+// http://www.anothermag.com/art-photography/3318/top-10-collage-artists-hannah-hoch-to-man-ray
+// http://create.adobe.com/2016/7/21/trend_collage_art.html
+//David Hockney
+//Rauschenberg
 
 //Arrays
 

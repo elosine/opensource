@@ -1,3 +1,15 @@
+/*
+289
+A 6-inch (15 cm) grid covering each of the four 
+black walls. White lines to points on the grids. 
+Fourth wall: twenty-four lines from the center, 
+twelve lines from the midpoint of each of the 
+sides, twelve lines from each corner.
+(The length of the lines and their placement 
+are determined by the drafter.) 
+(Detail: 4th wall only)
+
+*/
 
 
 int[] x, y;
@@ -12,6 +24,9 @@ void setup() {
   for (int i=0; i<x.length; i++) {
     x[i] = (25*i) + 25;
   } 
+   for (int i=0; i<y.length; i++) {
+    y[i] = (25*i) + 25;
+  }
   
   /*
   int ii = 0;
@@ -22,10 +37,6 @@ void setup() {
     ii++;
   }
   */
-  
-  for (int i=0; i<x.length; i++) {
-    y[i] = (25*i) + 25;
-  }
 
   //24 lines from the center
   for (int i=0; i<24; i++) {
