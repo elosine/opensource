@@ -11,7 +11,7 @@ boolean fif = false;
 
 void setup() {
   size(displayWidth, displayHeight);
-  font = loadFont("Monaco-24.vlw");
+  font = loadFont("Arial-Black-24.vlw");
   textFont(font);
   osc = new OscP5(this, 12321);
   sc = new NetAddress("127.0.0.1", 57120);
@@ -19,6 +19,14 @@ void setup() {
 
 void draw() {
   background(0);
+  stroke(255,255,0);
+    line(1382, 0, 1382, height);
+    line(1114, 0, 1114, height);
+    line(1218, 0, 1218, height);
+    line(1300, 0, 1300, height);
+    line(1382, 0, 1382, height);
+    line(1055, 0, 1055, height);
+    line(1179, 0, 1179, height);
 
   if (fif) {
     stroke(255, 128, 0);
@@ -86,4 +94,3 @@ void keyPressed() {
     osc.send("/stay", new Object[]{}, sc);
   }
 }
-
